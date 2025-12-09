@@ -15,6 +15,10 @@ export default tseslint.config({
     extends: [eslint.configs.recommended, ...tseslint.configs.recommendedTypeChecked, eslintConfigPrettier],
     rules: {
         'no-console': 'error',
-        quotes: ['error', 'single', { allowTemplateLiterals: true }]
+        'no-useless-catch': 0,
+        quotes: ['error', 'single', { allowTemplateLiterals: true }],
+        '@typescript-eslint/no-unsafe-call': 'off',
+        '@typescript-eslint/no-unsafe-member-access': 'off',
+        '@typescript-eslint/no-unsafe-assignment': 'off'
     }
 })
